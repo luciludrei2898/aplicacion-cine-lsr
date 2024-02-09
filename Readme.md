@@ -4,3 +4,7 @@ Otro refrán español que me gusta mucho es: "Para lo que me queda en el convent
 
 Un poco más de seriedad, la verdad que este código es mucho más mejorable, sobretodo porque la clase Cine cadece de mucha importancia, y podría haber hecho el método reservar() y después llamar a la sala, enviando
 el int sala, int fila e int columna a buySala() y comprar la entrada. Pero esto lo haré en la versión para A.
+
+En principio ya, si añado mejoras abriré más ramas para ello.
+
+Ea, adeu.
