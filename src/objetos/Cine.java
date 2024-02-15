@@ -1,7 +1,8 @@
 package objetos;
 /**
- * La clase cine representa un cine
- */
+ * El clase Cine se trata de un objeto. Esta compuesto de tres atributos, nombre (string), capacidad (int) y
+ * un array de objetos de Salas. Este array es variable y se puede modificar
+ * según lo que se introduzca en el constructor. */
 public class Cine {
 
     // ATRIBUTOS
@@ -23,15 +24,16 @@ public class Cine {
     // GETTER & SETTER
 
     /**
-     *
-     * @return nombre del cine
+     *  Muestra el nombre del cine.
+     * @return el nombre del cine (tipo string)
      */
     public String getNameCinema() {
         return nameCinema;
     }
 
     /**
-     *
+     *  Cambia el nombre del cine. Al ser tipo string, permite caracteres ASCII. En este caso el nombre se construye desde el constructor.
+     *  No desde metodos.
      * @param nameCinema cambia el nombre del cine
      */
     public void setNameCinema(String nameCinema) {
@@ -39,16 +41,16 @@ public class Cine {
     }
 
     /**
-     *
-     * @return aforo del cine
+     *  El aforo es la capacidad del cine de albergar personas. Este debe ser un numero siempre mayor de 0.
+     * @return aforo del cine (tipo int)
      */
     public int getCapacity() {
         return capacity;
     }
 
     /**
-     *
-     * @param capacity cambia el aforo del cine
+     *  El aforo es modificado con el metodo setCapacity. Esta variable de un num entero (int).
+     * @param capacity cambia el aforo del cine (tipo int)
      */
 
     public void setCapacity(int capacity) {
@@ -56,8 +58,9 @@ public class Cine {
     }
 
     /**
-     *
-     * @return el array de las salas
+     *  El atributo salas es un array de objetos. En este caso, en el constructor indicamos cuantas salas queremos tener pero
+     *  no cuales son. Las que estan dentro se construyen en el main.
+     * @return el array de las salas (null en el caso de estar vacio).
      */
 
     public Sala[] getSalas() {
@@ -65,7 +68,7 @@ public class Cine {
     }
 
     /**
-     *
+     *  Para modificar el numero de salas. Este es un array de objetos, en el caso de cambiar su longitud/capacidad, se rellena con null.
      * @param salas cambia el numero de salas
      */
 

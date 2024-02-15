@@ -2,7 +2,10 @@ package objetos;
 import java.util.Scanner;
 
 /**
- *  La clase sala representa una sala
+ *  La clase sala se trata de un objeto. Las salas tienen un ID (int) que representa el código único de la sala.
+ *  Otro de sus atributos es un array (String) de butacas, que representa los asientos del cine,
+ *  tienen unas filas (siempre un numero positivo y + de 10).
+ *  El ultimo atributo que compone una sala de cine es un objeto. Este objeto es la película que emiten.
  */
 public class Sala {
 
@@ -37,7 +40,7 @@ public class Sala {
 
     /**
      * METODO getIdSala
-     * Muestra el id de la Sala.
+     * Muestra el id de la Sala. Este es un atributo tipo int (numero entero).
      * @return idSala
      */
 
@@ -47,8 +50,8 @@ public class Sala {
 
     /**
      * METODO setIdSala
-     * Cambia el id de la sala
-     * @param
+     * Cambia el id de la sala. Debe ser un valor de tipo entero.
+     * @param idSala
      */
 
     public void setIdSala(int idSala) {
@@ -57,7 +60,8 @@ public class Sala {
 
     /**
      * METODO getSeats
-     * Muestra las butacas de la sala
+     * Muestra las butacas de la sala. Se trata de una matriz de Strings. En el caso de estar vacia, imprime nulls.
+     *
      * @return seats
      */
 
@@ -67,8 +71,8 @@ public class Sala {
 
     /**
      * METODO seatSeats
-     * Cambia las butacas de la sala
-     * @param
+     * Cambia la disposicion de las butacas de la sala. Tanto las columnas como las filas (int).
+     * @param seats
      */
 
     public void setSeats(String[][] seats) {
@@ -77,7 +81,7 @@ public class Sala {
 
     /**
      * METODO getMovie
-     * Muestra la pelicula que se emite en la sala
+     * Muestra la pelicula que se emite en la sala. Esta es un objeto que tiene sus propios atributos.
      * @return movie
      */
 
@@ -87,7 +91,7 @@ public class Sala {
 
     /**
      * METODO setMovie
-     * Modifica la pelicula que se emite en la sala
+     * Modifica la pelicula que se emite en la sala, esta es un objeto que tiene sus propios atributos. Dos o más salas pueden tener varias peliculas.
      * @param movie
      */
 
@@ -99,10 +103,10 @@ public class Sala {
     // VER BUTACAS
 
     /**
-     * METODO showSeats
-     *
-     * Muestra las butacas de la sala elegida.
-     * En el caso de querer comprar una entrada, te redirige a otro metodo.
+     * Muestra las butacas de la sala elegida. Después de imprimir en consola,
+     * hace una pregunta al usuario de si desea comprar la entrada (variable answerUserBuySeat).
+     * En el caso de ser 1 (si desea hacer una compra), redirige a otro método, que es el método de compra buySeats().
+     * En el caso de ser diferente a 2, redirige de nuevo a la Home.
      */
     public void showSeats() {
 
@@ -136,9 +140,10 @@ public class Sala {
 
     /**
      * METODO buySeats
-     *
-     * Este metodo te deja comprar las butacas. En el caso de que esta este ocupada
-     * da error y puedes introducir de nuevo otra fila y otro asiento.
+     * Este método te deja comprar las butacas. No recibe ninguna variable.  Se trata de un bucle de compra que solo saldrá de
+     * el en el caso de haber hecho la compra de entrada o de haber decidido finalmente no comprarla. (flagCompra == true).
+     * En el caso de que el asiento no este libre (! = null) , vuelve a solicitar los datos a
+     * introducir (fila (int)/columna (int)/email (String)).
      */
 
     public void buySeats() {
