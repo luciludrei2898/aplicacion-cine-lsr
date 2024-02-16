@@ -7,4 +7,6 @@ el int sala, int fila e int columna a buySala() y comprar la entrada. Pero esto 
 
 En principio ya, si añado mejoras abriré más ramas para ello.
 
+PePoPiPu was here.
+
 Ea, adeu.
